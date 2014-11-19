@@ -8,21 +8,6 @@ function checkMusicFormular(){
     var buchstaben="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäüöÄÜÖß ";
     var zahlen="0123456789";
 
-    //Überprüfung von filmtitel in film.html
-    if (document.Formular.albumtitel.value == "") {
-        alert(Fehlermeldung);
-        document.Formular.albumtitel.focus();
-		document.Formular.albumtitel.style.border ="2px solid red";
-        return false;
-    }
-    for (var i=0; i<document.Formular.albumtitel.value.length; i++) {
-        if (allZeichen.indexOf(document.Formular.albumtitel.value.charAt(i)) == -1) {
-            alert(Fehlermeldung);
-            document.Formular.albumtitel.focus();
-			document.Formular.albumtitel.style.border ="2px solid red";
-            return false;
-        }
-    }
     //Überprüfung von regie und drehbuch in film.html
     if (document.Formular.interpreter.value == "") {
         alert(Fehlermeldung);
@@ -38,25 +23,18 @@ function checkMusicFormular(){
             return false;
         }
     }
-    if (document.Formular.regie.value == "") {
+	//Überprüfung von filmtitel in film.html
+    if (document.Formular.albumtitel.value == "") {
         alert(Fehlermeldung);
-        document.Formular.regie.focus();
-		document.Formular.regie.style.border ="2px solid red";
+        document.Formular.albumtitel.focus();
+		document.Formular.albumtitel.style.border ="2px solid red";
         return false;
     }
-    var pattern = /\ /g;
-    var result = pattern.test(document.Formular.regie.value );
-    if (result == false) {
-        alert(Fehlermeldung);
-        document.Formular.regie.focus();
-		document.Formular.regie.style.border ="2px solid red";
-        return false;
-    }
-    for (var i=0; i<document.Formular.regie.value.length; i++) {
-        if (buchstaben.indexOf(document.Formular.regie.value.charAt(i)) == -1) {
+    for (var i=0; i<document.Formular.albumtitel.value.length; i++) {
+        if (allZeichen.indexOf(document.Formular.albumtitel.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
-            document.Formular.regie.focus();
-			document.Formular.regie.style.border ="2px solid red";
+            document.Formular.albumtitel.focus();
+			document.Formular.albumtitel.style.border ="2px solid red";
             return false;
         }
     }
