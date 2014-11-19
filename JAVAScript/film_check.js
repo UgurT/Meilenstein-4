@@ -12,12 +12,14 @@ function checkFilmFormular(){
     if (document.Formular.filmtitel.value == "") {
         alert(Fehlermeldung);
         document.Formular.filmtitel.focus();
-        return false;
+		document.Formular.filmtitel.style.border ="2px solid red";
+		return false;
     }
     for (var i=0; i<document.Formular.filmtitel.value.length; i++) {
         if (allZeichen.indexOf(document.Formular.filmtitel.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.filmtitel.focus();
+			document.Formular.filmtitel.style.border ="2px solid red";
             return false;
         }
     }
@@ -25,6 +27,7 @@ function checkFilmFormular(){
     if (document.Formular.regie.value == "") {
         alert(Fehlermeldung);
         document.Formular.regie.focus();
+		document.Formular.regie.style.border ="2px solid red";
         return false;
     }
     var pattern = /\ /g;
@@ -32,6 +35,8 @@ function checkFilmFormular(){
     if (result == false) {
         alert(Fehlermeldung);
         document.Formular.regie.focus();
+				document.Formular.regie.style.border ="2px solid red";
+
         return false;
     }
 
@@ -39,12 +44,14 @@ function checkFilmFormular(){
         if (buchstaben.indexOf(document.Formular.regie.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.regie.focus();
+			document.Formular.regie.style.border ="2px solid red";
             return false;
         }
     }
     if (document.Formular.drehbuch.value == "") {
         alert(Fehlermeldung);
         document.Formular.drehbuch.focus();
+		document.Formular.drehbuch.style.border ="2px solid red";
         return false;
     }
     var pattern = /\ /g;
@@ -52,12 +59,14 @@ function checkFilmFormular(){
     if (result == false) {
         alert(Fehlermeldung);
         document.Formular.drehbuch.focus();
+		document.Formular.drehbuch.style.border ="2px solid red";
         return false;
     }
     for (var i=0; i<document.Formular.drehbuch.value.length; i++) {
         if (buchstaben.indexOf(document.Formular.drehbuch.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.drehbuch.focus();
+				document.Formular.drehbuch.style.border ="2px solid red";
             return false;
         }
     }
@@ -66,6 +75,7 @@ function checkFilmFormular(){
         if (buchstaben.indexOf(document.Formular.schauspieler.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.schauspieler.focus();
+			document.Formular.schauspieler.style.border ="2px solid red";
             return false;
         }
     }
@@ -73,17 +83,20 @@ function checkFilmFormular(){
     if (document.Formular.filmerscheinungsjahr.value == "") {
         alert(Fehlermeldung);
         document.Formular.filmerscheinungsjahr.focus();
+		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
         return false;
     }
     if (document.Formular.filmerscheinungsjahr.value > 2014) {
         alert(Fehlermeldung);
         document.Formular.filmerscheinungsjahr.focus();
+		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
         return false;
     }
     for (var i=0; i<document.Formular.filmerscheinungsjahr.value.length; i++) {
         if (zahlen.indexOf(document.Formular.filmerscheinungsjahr.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.filmerscheinungsjahr.focus();
+			document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
             return false;
         }
     }

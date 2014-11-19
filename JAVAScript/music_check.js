@@ -12,12 +12,14 @@ function checkMusicFormular(){
     if (document.Formular.albumtitel.value == "") {
         alert(Fehlermeldung);
         document.Formular.albumtitel.focus();
+		document.Formular.albumtitel.style.border ="2px solid red";
         return false;
     }
     for (var i=0; i<document.Formular.albumtitel.value.length; i++) {
         if (allZeichen.indexOf(document.Formular.albumtitel.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.albumtitel.focus();
+			document.Formular.albumtitel.style.border ="2px solid red";
             return false;
         }
     }
@@ -25,18 +27,21 @@ function checkMusicFormular(){
     if (document.Formular.interpreter.value == "") {
         alert(Fehlermeldung);
         document.Formular.interpreter.focus();
+		document.Formular.interpreter.style.border ="2px solid red";
         return false;
     }
     for (var i = 0; i < document.Formular.interpreter.value.length; i++) {
         if (buchstaben.indexOf(document.Formular.interpreter.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.interpreter.focus();
+			document.Formular.interpreter.style.border ="2px solid red";
             return false;
         }
     }
     if (document.Formular.regie.value == "") {
         alert(Fehlermeldung);
         document.Formular.regie.focus();
+		document.Formular.regie.style.border ="2px solid red";
         return false;
     }
     var pattern = /\ /g;
@@ -44,12 +49,14 @@ function checkMusicFormular(){
     if (result == false) {
         alert(Fehlermeldung);
         document.Formular.regie.focus();
+		document.Formular.regie.style.border ="2px solid red";
         return false;
     }
     for (var i=0; i<document.Formular.regie.value.length; i++) {
         if (buchstaben.indexOf(document.Formular.regie.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.regie.focus();
+			document.Formular.regie.style.border ="2px solid red";
             return false;
         }
     }
@@ -58,6 +65,7 @@ function checkMusicFormular(){
         if (buchstaben.indexOf(document.Formular.songs.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.songs.focus();
+			document.Formular.songs.style.border ="2px solid red";
             return false;
         }
     }
@@ -65,17 +73,20 @@ function checkMusicFormular(){
     if (document.Formular.musicerscheinungsjahr.value == "") {
         alert(Fehlermeldung);
         document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
         return false;
     }
     if (document.Formular.musicerscheinungsjahr.value > 2014) {
         alert(Fehlermeldung);
         document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
         return false;
     }
     for (var i=0; i<document.Formular.musicerscheinungsjahr.value.length; i++) {
         if (zahlen.indexOf(document.Formular.musicerscheinungsjahr.value.charAt(i)) == -1) {
             alert(Fehlermeldung);
             document.Formular.musicerscheinungsjahr.focus();
+			document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
             return false;
         }
     }
