@@ -9,35 +9,25 @@ function checkMusicFormular(){
     var zahlen="0123456789";
 	var fehler = false;
 
-    //check interpreter: is empty?
-    if (document.Formular.interpreter.value == "") {
-        document.Formular.interpreter.focus();
-		document.Formular.interpreter.style.border ="2px solid red";
+	//check musicerscheinungsjahr: is empty?
+    if (document.Formular.musicerscheinungsjahr.value == "") {
+        document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
         fehler = true;
     }else{
-		document.Formular.interpreter.style.border = "";
+		document.Formular.musicerscheinungsjahr.style.border="";
 	}
-	//check interpeter: is index of the alphabet
-    for (var i = 0; i < document.Formular.interpreter.value.length; i++) {
-        if (buchstaben.indexOf(document.Formular.interpreter.value.charAt(i).trim()) == -1) {
-            document.Formular.interpreter.focus();
-			document.Formular.interpreter.style.border ="2px solid red";
-            fehler = true;
-        }
+	//check musicerscheinungsjahr is bigger as 2014
+    if (document.Formular.musicerscheinungsjahr.value > 2014) {
+        document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+        fehler = true;
     }
-	//check albumtitel: is empty?
-    if (document.Formular.albumtitel.value == "") {
-        document.Formular.albumtitel.focus();
-		document.Formular.albumtitel.style.border ="2px solid red";
-        fehler = true;
-    }else{
-		document.Formular.albumtitel.style.border="";
-	}
-	//check albumtitel: is index of the alphabet and numbers
-    for (var i=0; i<document.Formular.albumtitel.value.length; i++) {
-        if (allZeichen.indexOf(document.Formular.albumtitel.value.charAt(i).trim()) == -1) {
-            document.Formular.albumtitel.focus();
-			document.Formular.albumtitel.style.border ="2px solid red";
+	//check musicerscheinungsjahr: is index of numbers
+    for (var i=0; i<document.Formular.musicerscheinungsjahr.value.length; i++) {
+        if (zahlen.indexOf(document.Formular.musicerscheinungsjahr.value.charAt(i)) == -1) {
+            document.Formular.musicerscheinungsjahr.focus();
+			document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
             fehler = true;
         }
     }
@@ -65,25 +55,35 @@ function checkMusicFormular(){
             fehler = true;
 			}
     }
-    //check musicerscheinungsjahr: is empty?
-    if (document.Formular.musicerscheinungsjahr.value == "") {
-        document.Formular.musicerscheinungsjahr.focus();
-		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+	//check albumtitel: is empty?
+    if (document.Formular.albumtitel.value == "") {
+        document.Formular.albumtitel.focus();
+		document.Formular.albumtitel.style.border ="2px solid red";
         fehler = true;
     }else{
-		document.Formular.musicerscheinungsjahr.style.border="";
+		document.Formular.albumtitel.style.border="";
 	}
-	//check musicerscheinungsjahr is bigger as 2014
-    if (document.Formular.musicerscheinungsjahr.value > 2014) {
-        document.Formular.musicerscheinungsjahr.focus();
-		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
-        fehler = true;
+	//check albumtitel: is index of the alphabet and numbers
+    for (var i=0; i<document.Formular.albumtitel.value.length; i++) {
+        if (allZeichen.indexOf(document.Formular.albumtitel.value.charAt(i).trim()) == -1) {
+            document.Formular.albumtitel.focus();
+			document.Formular.albumtitel.style.border ="2px solid red";
+            fehler = true;
+        }
     }
-	//check musicerscheinungsjahr: is index of numbers
-    for (var i=0; i<document.Formular.musicerscheinungsjahr.value.length; i++) {
-        if (zahlen.indexOf(document.Formular.musicerscheinungsjahr.value.charAt(i)) == -1) {
-            document.Formular.musicerscheinungsjahr.focus();
-			document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+    //check interpreter: is empty?
+    if (document.Formular.interpreter.value == "") {
+        document.Formular.interpreter.focus();
+		document.Formular.interpreter.style.border ="2px solid red";
+        fehler = true;
+    }else{
+		document.Formular.interpreter.style.border = "";
+	}
+	//check interpeter: is index of the alphabet
+    for (var i = 0; i < document.Formular.interpreter.value.length; i++) {
+        if (buchstaben.indexOf(document.Formular.interpreter.value.charAt(i).trim()) == -1) {
+            document.Formular.interpreter.focus();
+			document.Formular.interpreter.style.border ="2px solid red";
             fehler = true;
         }
     }
