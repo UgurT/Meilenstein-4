@@ -8,29 +8,7 @@ function checkFilmFormular(){
     var buchstaben="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäüöÄÜÖß ";
     var zahlen="0123456789";
 	var fehler = false;
-
-	//check filmerscheinungsjahr: is empty?
-    if (document.Formular.filmerscheinungsjahr.value == "") {
-        document.Formular.filmerscheinungsjahr.focus();
-		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
-        fehler = true;
-    }else{
-		document.Formular.filmerscheinungsjahr.style.border = "";
-		}
-	//check filmerscheinungsjahr: bigger as 2014?
-    if (document.Formular.filmerscheinungsjahr.value > 2014) {
-        document.Formular.filmerscheinungsjahr.focus();
-		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
-        fehler = true;
-	}
-	//check filmerscheinungsjahr: index of numbers?
-    for (var i=0; i<document.Formular.filmerscheinungsjahr.value.length; i++) {
-        if (zahlen.indexOf(document.Formular.filmerscheinungsjahr.value.charAt(i)) == -1) {
-            document.Formular.filmerscheinungsjahr.focus();
-			document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
-            fehler = true;
-        }
-    }
+	
 	//check schauspieler: is empty?
 	if (document.Formular.schauspieler.value == "") {
         document.Formular.schauspieler.focus();
@@ -54,6 +32,28 @@ function checkFilmFormular(){
 			document.Formular.schauspieler.style.border ="2px solid red";
             fehler = true;
 			}
+    }
+	//check filmerscheinungsjahr: is empty?
+    if (document.Formular.filmerscheinungsjahr.value == "") {
+        document.Formular.filmerscheinungsjahr.focus();
+		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
+        fehler = true;
+    }else{
+		document.Formular.filmerscheinungsjahr.style.border = "";
+		}
+	//check filmerscheinungsjahr: bigger as 2014?
+    if (document.Formular.filmerscheinungsjahr.value > 2014) {
+        document.Formular.filmerscheinungsjahr.focus();
+		document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
+        fehler = true;
+	}
+	//check filmerscheinungsjahr: index of numbers?
+    for (var i=0; i<document.Formular.filmerscheinungsjahr.value.length; i++) {
+        if (zahlen.indexOf(document.Formular.filmerscheinungsjahr.value.charAt(i)) == -1) {
+            document.Formular.filmerscheinungsjahr.focus();
+			document.Formular.filmerscheinungsjahr.style.border ="2px solid red";
+            fehler = true;
+        }
     }
 	//check drehbuch: is empty?
     if (document.Formular.drehbuch.value == "") {

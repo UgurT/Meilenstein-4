@@ -8,29 +8,7 @@ function checkMusicFormular(){
     var buchstaben="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzäüöÄÜÖß ";
     var zahlen="0123456789";
 	var fehler = false;
-
-	//check musicerscheinungsjahr: is empty?
-    if (document.Formular.musicerscheinungsjahr.value == "") {
-        document.Formular.musicerscheinungsjahr.focus();
-		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
-        fehler = true;
-    }else{
-		document.Formular.musicerscheinungsjahr.style.border="";
-	}
-	//check musicerscheinungsjahr is bigger as 2014
-    if (document.Formular.musicerscheinungsjahr.value > 2014) {
-        document.Formular.musicerscheinungsjahr.focus();
-		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
-        fehler = true;
-    }
-	//check musicerscheinungsjahr: is index of numbers
-    for (var i=0; i<document.Formular.musicerscheinungsjahr.value.length; i++) {
-        if (zahlen.indexOf(document.Formular.musicerscheinungsjahr.value.charAt(i)) == -1) {
-            document.Formular.musicerscheinungsjahr.focus();
-			document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
-            fehler = true;
-        }
-    }
+	
 	//check songs: is empty?
 	if (document.Formular.songs.value == "") {
         document.Formular.songs.focus();
@@ -54,6 +32,28 @@ function checkMusicFormular(){
 			document.Formular.songs.style.border ="2px solid red";
             fehler = true;
 			}
+    }
+	//check musicerscheinungsjahr: is empty?
+    if (document.Formular.musicerscheinungsjahr.value == "") {
+        document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+        fehler = true;
+    }else{
+		document.Formular.musicerscheinungsjahr.style.border="";
+	}
+	//check musicerscheinungsjahr is bigger as 2014
+    if (document.Formular.musicerscheinungsjahr.value > 2014) {
+        document.Formular.musicerscheinungsjahr.focus();
+		document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+        fehler = true;
+    }
+	//check musicerscheinungsjahr: is index of numbers
+    for (var i=0; i<document.Formular.musicerscheinungsjahr.value.length; i++) {
+        if (zahlen.indexOf(document.Formular.musicerscheinungsjahr.value.charAt(i)) == -1) {
+            document.Formular.musicerscheinungsjahr.focus();
+			document.Formular.musicerscheinungsjahr.style.border ="2px solid red";
+            fehler = true;
+        }
     }
 	//check albumtitel: is empty?
     if (document.Formular.albumtitel.value == "") {
